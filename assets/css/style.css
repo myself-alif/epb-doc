@@ -183,3 +183,48 @@ img {
   height: 100%;
   object-fit: cover;
 }
+
+.demo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.demo-container .demo-img {
+  display: block;
+  border: 1.75px solid #000;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  overflow: hidden;
+}
+.demo-container .demo-img img {
+  transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  -ms-transition: transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+}
+.demo-container .demo-img img:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+@media (max-width: 767px) {
+  .demo-container {
+    display: block;
+  }
+  .demo-container .demo-img:not(:last-of-type) {
+    margin-bottom: 25px;
+  }
+}
